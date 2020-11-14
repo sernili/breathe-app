@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #224941 url('/img/bg.jpg') no-repeat center/cover;
+    color: #fff;
+    font-family: Montserrat;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 40px ;
+    margin-top: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 110%;
+}
+
+.footer {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    
+}
+
+footer {
+    position: absolute;
+    bottom: 50px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    top: 275px;
+    transform: scale(1);
+}
+
+.gradient-circle {
+    background: conic-gradient(
+        #55b7a4 0%,
+        #4ca493 40%,
+        #fff 40%,
+        #fff 60%,
+        #336d62 60%,
+        #2a5b52 100%
+    );
+    background-color: #fff;
+    height: 320px;
+    width: 320px;
+    top: -10px;
+    left: -10px;
+    position: absolute;
+    z-index: -2;
+    border-radius: 50%;
+}
+
+.circle {
+    background-color: #010f1c;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.pointer-container {
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    width: 20px;
+    height: 190px;
+    animation: rotate 15s linear forwards infinite;
+    transform-origin: bottom center;
+}
+
+.pointer {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+.grow {
+    animation: grow 6s linear forwards;
+}
+
+.shrink {
+    animation: shrink 6s linear forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
